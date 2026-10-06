@@ -12,7 +12,7 @@
     "internal"
   ],
   "deployment": {
-    "state": "production",
+    "state": "public",
     "production_urls": [
       "https://investigadopedia.evegat.cl"
     ]
@@ -20,7 +20,7 @@
   "repository": {
     "type": "git",
     "default_branch": "main",
-    "remote_policy": "synced"
+    "remote_policy": "existing"
   },
   "commands": {
     "quality": [

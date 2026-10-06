@@ -14,7 +14,9 @@ class TestWebPrivacyAndResilience(unittest.TestCase):
 
     def test_journals_json_exists_and_offline_capable(self):
         """Verifica que el catálogo JSON para la web exista y sea íntegro sin depender de red."""
-        json_path = Path("2 - Project/EDI001 - Investigadopedia/web/data/journals.json")
+        json_path = Path("web/data/journals.json")
+        if not json_path.exists():
+            json_path = Path("2 - Project/EDI001 - Investigadopedia/web/data/journals.json")
         self.assertTrue(json_path.exists(), "El archivo web/data/journals.json debe existir para servir offline.")
         data = json.loads(json_path.read_text(encoding="utf-8"))
         self.assertGreaterEqual(len(data), 20)

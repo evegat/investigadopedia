@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Investigadopedia Match — JANE Latam para Ciencias Sociales</title>
+  <title>Investigadopedia — Dónde Publicar y Metodología Abierta</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
@@ -15,185 +15,298 @@
 <body class="bg-slate-50 text-slate-900 min-h-screen flex flex-col">
 
   <!-- Header Institucional -->
-  <header class="bg-white border-b border-slate-200 sticky top-0 z-30">
-    <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+  <header class="bg-white border-b border-slate-200 sticky top-0 z-30 shadow-xs">
+    <div class="max-w-6xl mx-auto px-4 py-3.5 flex items-center justify-between">
       <div class="flex items-center space-x-3">
-        <div class="w-10 h-10 bg-indigo-700 text-white rounded-lg flex items-center justify-center font-bold text-xl shadow-sm">
+        <div class="w-9 h-9 bg-indigo-700 text-white rounded-lg flex items-center justify-center font-bold text-lg shadow-sm">
           I
         </div>
         <div>
           <div class="flex items-center space-x-2">
-            <span class="font-bold text-lg text-slate-900">Investigadopedia Match</span>
-            <span class="text-xs bg-indigo-100 text-indigo-800 font-semibold px-2 py-0.5 rounded">JANE Latam</span>
+            <span class="font-bold text-lg text-slate-900">Investigadopedia</span>
+            <span class="text-xs bg-slate-100 text-slate-700 font-medium px-2 py-0.5 rounded">Ciencias Sociales</span>
           </div>
-          <p class="text-xs text-slate-500">Estimador de Revistas y Pares en Ciencias Sociales e Iberoamérica</p>
+          <p class="text-xs text-slate-500">Publicación desinsesgada, repositorios abiertos y metodología rigurosa</p>
         </div>
       </div>
-      <div class="flex items-center space-x-4">
-        <span id="catalog-count" class="text-xs bg-slate-100 text-slate-600 px-2.5 py-1 rounded-full font-medium">Cargando catálogo...</span>
+      
+      <!-- Navegación de Pestañas Principales -->
+      <nav class="hidden md:flex items-center space-x-1 text-xs font-semibold">
+        <button onclick="switchTab('match')" id="tab-btn-match" class="px-3 py-2 rounded-lg text-indigo-700 bg-indigo-50 font-bold transition-colors">
+          <i class="fas fa-book-bookmark mr-1"></i> Dónde Publicar
+        </button>
+        <button onclick="switchTab('catalog')" id="tab-btn-catalog" class="px-3 py-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 font-semibold transition-colors">
+          <i class="fas fa-cubes-stacked mr-1"></i> Catálogo de Habilidades y Repos
+        </button>
+        <button onclick="switchTab('roadmap')" id="tab-btn-roadmap" class="px-3 py-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 font-semibold transition-colors">
+          <i class="fas fa-layer-group mr-1"></i> Roadmap
+        </button>
+      </nav>
+
+      <div class="flex items-center space-x-3">
         <a href="https://evegat.cl" target="_blank" class="text-xs text-slate-600 hover:text-indigo-600 font-medium">
-          <i class="fas fa-external-link-alt mr-1"></i> evegat.cl
+          <i class="fas fa-arrow-up-right-from-square mr-1"></i> evegat.cl
         </a>
       </div>
     </div>
+
+    <!-- Navegación móvil -->
+    <div class="flex md:hidden border-t border-slate-100 px-2 py-1.5 overflow-x-auto text-xs font-medium space-x-1">
+      <button onclick="switchTab('match')" id="mob-tab-btn-match" class="px-2.5 py-1.5 rounded text-indigo-700 font-bold whitespace-nowrap bg-indigo-50">Dónde Publicar</button>
+      <button onclick="switchTab('catalog')" id="mob-tab-btn-catalog" class="px-2.5 py-1.5 rounded text-slate-600 whitespace-nowrap">Habilidades y Repos</button>
+      <button onclick="switchTab('roadmap')" id="mob-tab-btn-roadmap" class="px-2.5 py-1.5 rounded text-slate-600 whitespace-nowrap">Roadmap</button>
+    </div>
   </header>
 
-  <!-- Banner de Privacidad Absoluta -->
-  <div class="bg-emerald-700 text-emerald-50 px-4 py-2 text-xs">
+  <!-- Banner de Confianza y Resguardo Ético -->
+  <div class="bg-emerald-800 text-emerald-50 px-4 py-2 text-xs">
     <div class="max-w-6xl mx-auto flex items-center justify-between">
       <div class="flex items-center space-x-2">
-        <i class="fas fa-shield-halved text-emerald-300 text-sm"></i>
-        <span><strong>Privacidad 100% Client-Side:</strong> El análisis de tu abstract corre íntegramente en tu navegador. Ningún borrador inédito se guarda ni viaja a servidores privados.</span>
+        <i class="fas fa-shield-halved text-emerald-300"></i>
+        <span><strong>Tus ideas no salen de tu computador:</strong> El análisis de tu resumen corre exclusivamente en tu navegador. No guardamos tus textos ni los usamos para entrenar modelos.</span>
       </div>
-      <span class="hidden md:inline text-emerald-200">Acceso Abierto Diamante</span>
+      <span class="hidden md:inline text-emerald-200">Acceso Abierto Diamante ($0 costo)</span>
     </div>
   </div>
 
   <!-- Contenedor Principal -->
   <main class="max-w-6xl mx-auto px-4 py-8 flex-1 w-full">
 
-    <!-- Card de Formulario -->
-    <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 mb-8">
-      <div class="flex justify-between items-center mb-3">
-        <label for="abstract-input" class="block font-semibold text-slate-800 text-sm">
-          Pega el título o resumen de tu manuscrito:
-        </label>
-        <span class="text-xs text-slate-500">Español o portugués (admite inglés)</span>
-      </div>
-
-      <textarea id="abstract-input" rows="8" class="w-full p-4 rounded-lg border border-slate-300 focus:ring-2 focus:ring-indigo-600 focus:border-indigo-600 outline-none text-slate-800 text-sm academic-serif leading-relaxed" placeholder="Ingresa el resumen de tu investigación (ej: Este artículo analiza los efectos de las políticas habitacionales y la segregación residencial en el Gran Santiago...)"></textarea>
-
-      <!-- Botones de Acción Inmediata sobre el texto -->
-      <div class="mt-3 flex flex-wrap items-center justify-between gap-3 pt-2 border-t border-slate-100">
-        <div class="flex items-center space-x-2">
-          <button type="button" onclick="scrambleAction()" class="text-xs px-3 py-1.5 bg-slate-100 text-slate-700 hover:bg-slate-200 rounded font-medium transition-colors flex items-center shadow-xs" title="Desordena alfabéticamente las palabras en tu navegador para proteger la confidencialidad de tu borrador inédito">
-            <i class="fas fa-random mr-1.5 text-indigo-600"></i> Desordenar texto (Scramble)
-          </button>
-          <button type="button" onclick="clearAction()" class="text-xs px-3 py-1.5 text-slate-500 hover:text-slate-700 font-medium">
-            <i class="fas fa-eraser mr-1"></i> Limpiar
-          </button>
-        </div>
-
-        <div class="flex flex-wrap items-center gap-4 text-xs text-slate-600">
-          <label class="flex items-center space-x-1.5 cursor-pointer">
-            <input type="checkbox" id="chk-diamond" checked class="rounded text-indigo-600 focus:ring-indigo-500 h-4 w-4">
-            <span class="font-medium">Solo Diamante (Sin APC)</span>
-          </label>
-          <label class="flex items-center space-x-1.5 cursor-pointer">
-            <input type="checkbox" id="chk-live-authors" checked class="rounded text-indigo-600 focus:ring-indigo-500 h-4 w-4">
-            <span class="font-medium">Extraer Revisores en Vivo (OpenAlex)</span>
-          </label>
-          <div class="flex items-center space-x-1.5">
-            <span>Disciplina:</span>
-            <select id="sel-discipline" class="border border-slate-200 rounded px-2 py-1 text-xs bg-white outline-none">
-              <option value="all">Todas las disciplinas</option>
-              <option value="sociologia">Sociología</option>
-              <option value="politicas_publicas">Políticas Públicas</option>
-              <option value="ciencia_politica">Ciencia Política</option>
-              <option value="estudios_urbanos">Estudios Urbanos</option>
-              <option value="educacion">Educación</option>
-              <option value="economia">Economía</option>
-            </select>
-          </div>
-        </div>
-      </div>
-
-      <!-- Botón de Lanzamiento -->
-      <div class="mt-6">
-        <button id="btn-match" onclick="runMatch()" class="w-full py-3.5 bg-indigo-700 hover:bg-indigo-800 text-white font-bold rounded-lg shadow-sm transition-all text-sm flex items-center justify-center">
-          <i class="fas fa-compass mr-2"></i> Estimar Revistas y Pares Iberoamericanos
-        </button>
-      </div>
-    </div>
-
-    <!-- Sección de Resultados (Oculta por defecto) -->
-    <div id="results-section" class="hidden space-y-8">
+    <!-- ============================================== -->
+    <!-- PESTAÑA 1: DÓNDE PUBLICAR (RECOMENDADOR DE REVISTAS) -->
+    <!-- ============================================== -->
+    <div id="section-match" class="space-y-8">
       
-      <!-- Tabla de Revistas Sugeridas -->
-      <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
-        <div class="p-5 border-b border-slate-100 flex items-center justify-between">
+      <!-- Card de Formulario -->
+      <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
+        <div class="flex justify-between items-center mb-2">
           <div>
-            <h2 class="font-bold text-slate-900 text-base flex items-center">
-              <i class="fas fa-book-bookmark text-indigo-600 mr-2"></i> Revistas Sugeridas
-            </h2>
-            <p class="text-xs text-slate-500">Ordenadas por grado de coincidencia temática y lexical con tu abstract</p>
+            <h2 class="font-bold text-slate-900 text-base">Encuentra la revista adecuada para tu investigación</h2>
+            <p class="text-xs text-slate-500">Compara el tema de tu artículo con las revistas indexadas de Iberoamérica</p>
           </div>
-          <span class="text-xs bg-indigo-50 text-indigo-700 font-semibold px-2.5 py-1 rounded-full">
-            SciELO &bull; Redalyc &bull; Latindex 2.0
-          </span>
+          <span id="catalog-count" class="text-xs bg-slate-100 text-slate-700 font-medium px-2.5 py-1 rounded-full">Cargando revistas...</span>
         </div>
 
-        <div class="overflow-x-auto">
-          <table class="w-full text-left border-collapse">
-            <thead>
-              <tr class="bg-slate-50 text-xs text-slate-500 uppercase border-b border-slate-200">
-                <th class="p-4 w-12">#</th>
-                <th class="p-4">Revista / Institución</th>
-                <th class="p-4 w-32">País</th>
-                <th class="p-4 w-40">Afinidad</th>
-                <th class="p-4 w-36">Modelo APC</th>
-                <th class="p-4">Términos Clave</th>
-              </tr>
-            </thead>
-            <tbody id="journals-table-body" class="divide-y divide-slate-100 text-sm">
-              <!-- Renderizado dinámico -->
-            </tbody>
-          </table>
+        <textarea id="abstract-input" rows="7" class="w-full mt-3 p-4 rounded-lg border border-slate-300 focus:ring-2 focus:ring-indigo-600 focus:border-indigo-600 outline-none text-slate-800 text-sm academic-serif leading-relaxed" placeholder="Pega aquí el título o resumen de tu artículo (ej: Este trabajo analiza los efectos de las políticas habitacionales y la segregación residencial en el Gran Santiago...)"></textarea>
+
+        <!-- Botones de Acción y Filtros -->
+        <div class="mt-3 flex flex-wrap items-center justify-between gap-3 pt-2 border-t border-slate-100">
+          <div class="flex items-center space-x-2">
+            <button type="button" onclick="scrambleAction()" class="text-xs px-3 py-1.5 bg-slate-100 text-slate-700 hover:bg-slate-200 rounded font-medium transition-colors flex items-center" title="Desordena las palabras alfabéticamente para que nadie pueda leer tu argumento, manteniendo intacta la precisión de búsqueda">
+              <i class="fas fa-shuffle mr-1.5 text-indigo-600"></i> Desordenar palabras (Privacidad extra)
+            </button>
+            <button type="button" onclick="clearAction()" class="text-xs px-3 py-1.5 text-slate-500 hover:text-slate-700 font-medium">
+              <i class="fas fa-eraser mr-1"></i> Limpiar
+            </button>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-4 text-xs text-slate-600">
+            <label class="flex items-center space-x-1.5 cursor-pointer">
+              <input type="checkbox" id="chk-diamond" checked class="rounded text-indigo-600 focus:ring-indigo-500 h-4 w-4">
+              <span class="font-medium">Solo revistas gratuitas ($0 cobro al autor)</span>
+            </label>
+            <label class="flex items-center space-x-1.5 cursor-pointer">
+              <input type="checkbox" id="chk-live-authors" checked class="rounded text-indigo-600 focus:ring-indigo-500 h-4 w-4">
+              <span class="font-medium">Sugerir evaluadores y pares</span>
+            </label>
+            <div class="flex items-center space-x-1.5">
+              <span>Área:</span>
+              <select id="sel-discipline" class="border border-slate-200 rounded px-2 py-1 text-xs bg-white outline-none font-medium">
+                <option value="all">Todas las áreas</option>
+                <option value="sociologia">Sociología</option>
+                <option value="politicas_publicas">Políticas Públicas</option>
+                <option value="ciencia_politica">Ciencia Política</option>
+                <option value="estudios_urbanos">Estudios Urbanos</option>
+                <option value="educacion">Educación</option>
+                <option value="economia">Economía</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Botón de Búsqueda -->
+        <div class="mt-5">
+          <button id="btn-match" onclick="runMatch()" class="w-full py-3.5 bg-indigo-700 hover:bg-indigo-800 text-white font-bold rounded-lg shadow-sm transition-all text-sm flex items-center justify-center">
+            <i class="fas fa-magnifying-glass mr-2"></i> Buscar Revistas y Evaluadores Afines
+          </button>
         </div>
       </div>
 
-      <!-- Card de Revisores / Autores en Vivo -->
-      <div id="authors-card" class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 hidden">
-        <div class="flex items-center justify-between mb-4">
-          <div>
-            <h3 class="font-bold text-slate-900 text-base flex items-center">
-              <i class="fas fa-users text-indigo-600 mr-2"></i> Autores y Revisores Potenciales en la Región
-            </h3>
-            <p class="text-xs text-slate-500">Investigadores con publicaciones recientes sobre este tópico en las revistas recomendadas (OpenAlex Live)</p>
+      <!-- Resultados -->
+      <div id="results-section" class="hidden space-y-6">
+        
+        <!-- Tabla de Revistas Sugeridas -->
+        <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+          <div class="p-5 border-b border-slate-100 flex items-center justify-between">
+            <div>
+              <h3 class="font-bold text-slate-900 text-base flex items-center">
+                <i class="fas fa-book-bookmark text-indigo-600 mr-2"></i> Revistas Recomendadas
+              </h3>
+              <p class="text-xs text-slate-500">Ordenadas según afinidad temática con tu investigación</p>
+            </div>
+            <span class="text-xs bg-emerald-50 text-emerald-800 font-semibold px-2.5 py-1 rounded-full border border-emerald-200">
+              Sin cobro de publicación (Acceso Diamante)
+            </span>
+          </div>
+
+          <div class="overflow-x-auto">
+            <table class="w-full text-left border-collapse">
+              <thead>
+                <tr class="bg-slate-50 text-xs text-slate-500 uppercase border-b border-slate-200 font-semibold">
+                  <th class="p-4 w-12">#</th>
+                  <th class="p-4">Revista / Universidad</th>
+                  <th class="p-4 w-32">País</th>
+                  <th class="p-4 w-36">Afinidad</th>
+                  <th class="p-4 w-36">Costo de Publicación</th>
+                  <th class="p-4">Temas Coincidentes</th>
+                </tr>
+              </thead>
+              <tbody id="journals-table-body" class="divide-y divide-slate-100 text-sm">
+                <!-- Renderizado dinámico -->
+              </tbody>
+            </table>
           </div>
         </div>
 
-        <div id="authors-loading" class="p-6 text-center text-xs text-slate-500 flex items-center justify-center space-x-2">
-          <i class="fas fa-spinner fa-spin text-indigo-600 text-sm"></i>
-          <span>Consultando autores recientes en OpenAlex...</span>
+        <!-- Evaluadores / Pares Sugeridos -->
+        <div id="authors-card" class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 hidden">
+          <div class="flex items-center justify-between mb-4">
+            <div>
+              <h3 class="font-bold text-slate-900 text-base flex items-center">
+                <i class="fas fa-users text-indigo-600 mr-2"></i> Evaluadores y Pares Sugeridos
+              </h3>
+              <p class="text-xs text-slate-500">Investigadores con publicaciones recientes sobre este tema en las revistas recomendadas (útil para proponer revisores en tu postulación)</p>
+            </div>
+          </div>
+
+          <div id="authors-loading" class="p-6 text-center text-xs text-slate-500 flex items-center justify-center space-x-2">
+            <i class="fas fa-spinner fa-spin text-indigo-600 text-sm"></i>
+            <span>Buscando autores afines en la literatura de la región...</span>
+          </div>
+
+          <div id="authors-list" class="space-y-3 hidden">
+            <!-- Renderizado dinámico -->
+          </div>
         </div>
 
-        <div id="authors-list" class="space-y-3 hidden">
-          <!-- Renderizado dinámico -->
-        </div>
       </div>
 
     </div>
 
-    <!-- Sección de Roadmap Participativo y Votación -->
-    <div class="mt-12 bg-white rounded-xl border border-slate-200 shadow-sm p-6 space-y-6">
-      <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 border-b border-slate-100 pb-4">
-        <div>
-          <h3 class="font-bold text-slate-900 text-base flex items-center">
-            <i class="fas fa-layer-group text-indigo-600 mr-2"></i> Roadmap Participativo: Tú decides qué construimos
-          </h3>
-          <p class="text-xs text-slate-500">Vota por las próximas funciones que más necesitas o propón nuevas revistas y herramientas para la región.</p>
+    <!-- ============================================== -->
+    <!-- PESTAÑA 2: CATÁLOGO DE HABILIDADES Y RECURSOS (ESTILO AITMPL) -->
+    <!-- ============================================== -->
+    <div id="section-catalog" class="hidden space-y-6">
+      
+      <!-- Encabezado del Catálogo con Buscador y Filtros -->
+      <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 space-y-5">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-3 border-b border-slate-100 pb-4">
+          <div>
+            <div class="flex items-center space-x-2">
+              <span class="text-xs bg-indigo-50 text-indigo-700 font-bold px-2.5 py-0.5 rounded-full border border-indigo-100">
+                <i class="fas fa-boxes-stacked mr-1"></i> Hub Abierto
+              </span>
+              <span class="text-xs text-slate-400">&bull; Inspirado en el diseño modular de componentes</span>
+            </div>
+            <h2 class="text-xl font-bold text-slate-900 mt-1 flex items-center">
+              Catálogo de Habilidades, Prompts y Repositorios
+            </h2>
+            <p class="text-xs text-slate-500 mt-0.5">Componentes metodológicos curados, tutores de coherencia y observatorios públicos para investigar con rigor.</p>
+          </div>
+          <div class="text-xs text-slate-400 font-medium">
+            <span id="catalog-total-count" class="font-bold text-slate-700">9</span> componentes disponibles
+          </div>
         </div>
-        <span class="text-xs bg-indigo-50 text-indigo-700 font-semibold px-2.5 py-1 rounded-full w-fit">
-          Construcción Abierta &bull; Bien Público
-        </span>
+
+        <!-- Buscador Estilo aitmpl -->
+        <div class="relative">
+          <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+            <i class="fas fa-search text-xs"></i>
+          </div>
+          <input 
+            type="text" 
+            id="catalog-search-input" 
+            oninput="filterCatalog()" 
+            placeholder="Buscar por palabra clave, metodología, base o tema... (ej. SciELO, PRISMA, Gasto Público)" 
+            class="w-full pl-9 pr-20 py-2.5 bg-slate-50 border border-slate-200 rounded-lg text-xs text-slate-900 placeholder-slate-400 outline-none focus:bg-white focus:border-indigo-600 focus:ring-1 focus:ring-indigo-600 transition-all"
+          >
+          <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+            <kbd class="text-[10px] bg-slate-200 text-slate-500 font-mono px-1.5 py-0.5 rounded border border-slate-300">Ctrl + K</kbd>
+          </div>
+        </div>
+
+        <!-- Pills de Filtro por Categoría -->
+        <div class="flex flex-wrap items-center gap-1.5 text-xs pt-1" id="catalog-category-pills">
+          <button onclick="setCatalogCategory('all')" id="pill-all" class="cat-pill px-3 py-1.5 rounded-lg font-bold bg-indigo-700 text-white transition-all shadow-xs">
+            Todos <span id="count-all" class="ml-1 opacity-80">(9)</span>
+          </button>
+          <button onclick="setCatalogCategory('methods')" id="pill-methods" class="cat-pill px-3 py-1.5 rounded-lg font-medium bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all">
+            <i class="fas fa-compass-drafting mr-1 text-slate-500"></i> Habilidades y Métodos <span id="count-methods" class="ml-1 text-slate-400">(2)</span>
+          </button>
+          <button onclick="setCatalogCategory('tutoring')" id="pill-tutoring" class="cat-pill px-3 py-1.5 rounded-lg font-medium bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all">
+            <i class="fas fa-brain mr-1 text-slate-500"></i> Prompts y Tutores <span id="count-tutoring" class="ml-1 text-slate-400">(2)</span>
+          </button>
+          <button onclick="setCatalogCategory('harvest')" id="pill-harvest" class="cat-pill px-3 py-1.5 rounded-lg font-medium bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all">
+            <i class="fas fa-wheat-awn mr-1 text-slate-500"></i> Bases y Cosecha <span id="count-harvest" class="ml-1 text-slate-400">(1)</span>
+          </button>
+          <button onclick="setCatalogCategory('repos')" id="pill-repos" class="cat-pill px-3 py-1.5 rounded-lg font-medium bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all">
+            <i class="fas fa-folder-tree mr-1 text-slate-500"></i> Observatorios y Repos <span id="count-repos" class="ml-1 text-slate-400">(4)</span>
+          </button>
+        </div>
       </div>
 
-      <!-- Tarjetas de Votación Dinámicas -->
-      <div id="roadmap-cards-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <!-- Grid de Componentes Dinámico -->
+      <div id="catalog-cards-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         <!-- Renderizado dinámico desde app.js -->
       </div>
 
-      <!-- Formulario para Proponer Nueva Feature -->
-      <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 flex flex-col md:flex-row items-center gap-3">
-        <div class="flex-1 w-full">
-          <label for="proposal-text" class="block text-xs font-semibold text-slate-700 mb-1">¿Qué otra función o revista latinoamericana te gustaría tener?</label>
-          <input type="text" id="proposal-text" placeholder="Ej: Agregar revistas de Antropología de Perú, o exportador automático a formato BibTeX..." class="w-full text-xs p-2.5 rounded-lg border border-slate-300 outline-none focus:ring-2 focus:ring-indigo-600 bg-white">
+      <!-- Estado Vacío -->
+      <div id="catalog-empty-state" class="hidden bg-white rounded-xl border border-slate-200 p-12 text-center space-y-3">
+        <div class="w-12 h-12 bg-slate-100 text-slate-400 rounded-full flex items-center justify-center mx-auto text-xl">
+          <i class="fas fa-magnifying-glass"></i>
         </div>
-        <div class="w-full md:w-auto mt-2 md:mt-5">
-          <button type="button" onclick="submitNewProposal()" class="w-full md:w-auto px-4 py-2.5 bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs rounded-lg shadow-xs transition-colors flex items-center justify-center space-x-1">
-            <i class="fas fa-plus mr-1"></i> Proponer al Roadmap
-          </button>
+        <h3 class="font-bold text-slate-800 text-sm">No se encontraron componentes con esa búsqueda</h3>
+        <p class="text-xs text-slate-500 max-w-sm mx-auto">Prueba buscando con otros términos como 'SciELO', 'PRISMA', 'gasto' o selecciona la categoría 'Todos'.</p>
+        <button onclick="resetCatalogFilters()" class="text-xs font-bold text-indigo-700 hover:underline">
+          Restablecer filtros de búsqueda
+        </button>
+      </div>
+
+    </div>
+
+    <!-- ============================================== -->
+    <!-- PESTAÑA 4: ROADMAP PARTICIPATIVO Y VOTACIÓN -->
+    <!-- ============================================== -->
+    <div id="section-roadmap" class="hidden space-y-6">
+      <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 space-y-6">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 border-b border-slate-100 pb-4">
+          <div>
+            <h2 class="font-bold text-slate-900 text-base flex items-center">
+              <i class="fas fa-layer-group text-indigo-600 mr-2"></i> Roadmap Participativo: Tú decides qué construimos
+            </h2>
+            <p class="text-xs text-slate-500">Vota por las próximas funciones que más necesitas o propón nuevas revistas y herramientas para la región.</p>
+          </div>
+          <span class="text-xs bg-indigo-50 text-indigo-700 font-semibold px-2.5 py-1 rounded-full w-fit">
+            Construcción Abierta &bull; Bien Público
+          </span>
+        </div>
+
+        <!-- Tarjetas de Votación Dinámicas -->
+        <div id="roadmap-cards-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <!-- Renderizado dinámico desde app.js -->
+        </div>
+
+        <!-- Formulario para Proponer Nueva Feature -->
+        <div class="p-4 bg-slate-50 rounded-xl border border-slate-200 flex flex-col md:flex-row items-center gap-3">
+          <div class="flex-1 w-full">
+            <label for="proposal-text" class="block text-xs font-semibold text-slate-700 mb-1">¿Qué otra función o revista latinoamericana te gustaría tener?</label>
+            <input type="text" id="proposal-text" placeholder="Ej: Agregar revistas de Antropología de Perú, o exportador automático a formato BibTeX..." class="w-full text-xs p-2.5 rounded-lg border border-slate-300 outline-none focus:ring-2 focus:ring-indigo-600 bg-white">
+          </div>
+          <div class="w-full md:w-auto mt-2 md:mt-5">
+            <button type="button" onclick="submitNewProposal()" class="w-full md:w-auto px-4 py-2.5 bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs rounded-lg shadow-xs transition-colors flex items-center justify-center space-x-1">
+              <i class="fas fa-plus mr-1"></i> Proponer al Roadmap
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -202,16 +315,16 @@
     <div class="mt-8 bg-white rounded-xl border border-slate-200 shadow-sm p-6 space-y-4">
       <div class="flex items-center space-x-2 text-slate-900 font-bold text-sm border-b border-slate-100 pb-3">
         <i class="fas fa-user-shield text-emerald-600 text-lg"></i>
-        <span>Pacto de Protección de Ideas y Soberanía Epistémica (¿Cómo cuidamos tu manuscrito?)</span>
+        <span>Pacto de Protección de Ideas (¿Cómo cuidamos tu manuscrito?)</span>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-slate-600">
         <div class="p-3 bg-slate-50 rounded-lg border border-slate-100">
           <div class="font-bold text-slate-800 mb-1 flex items-center">
-            <i class="fas fa-laptop-code text-indigo-600 mr-1.5"></i> 1. Cómputo 100% en tu navegador (Client-Side)
+            <i class="fas fa-laptop text-indigo-600 mr-1.5"></i> 1. Análisis en tu propio equipo
           </div>
           <p>
-            No tenemos servidores de backend que capturen tu borrador. El cálculo de afinidad se ejecuta directamente en la memoria de tu navegador mediante JavaScript nativo. Al cerrar la pestaña, tu texto desaparece por completo.
+            No almacenamos tus textos en ningún servidor. La comparación de palabras se realiza en la memoria de tu propio navegador. Al cerrar la página, tu texto desaparece por completo.
           </p>
         </div>
 
@@ -220,32 +333,32 @@
             <i class="fas fa-ban text-red-600 mr-1.5"></i> 2. Cero entrenamiento de modelos de IA
           </div>
           <p>
-            Tus textos nunca se usan para entrenar LLMs, ni se venden a grandes editoriales corporativas ni se comparten con terceros. Protegemos la primicia de tu hallazgo científico.
+            Tus investigaciones jamás se usan para entrenar algoritmos, ni se comparten con editoriales comerciales. Protegemos la primicia de tus ideas.
           </p>
         </div>
 
         <div class="p-3 bg-slate-50 rounded-lg border border-slate-100">
           <div class="font-bold text-slate-800 mb-1 flex items-center">
-            <i class="fas fa-shuffle text-amber-600 mr-1.5"></i> 3. Ofuscación Scramble matemática
+            <i class="fas fa-shuffle text-amber-600 mr-1.5"></i> 3. Desordenar palabras (Privacidad extra)
           </div>
           <p>
-            Si activas <code>Desordenar texto (Scramble)</code>, las palabras se ordenan alfabéticamente antes de procesarse. Nadie que intercepte tu pantalla puede leer el argumento, pero los algoritmos de bolsa de palabras conservan su precisión intacta.
+            Si usas la opción <code>Desordenar palabras</code>, el texto se ordena alfabéticamente antes de buscar. Nadie que mire tu pantalla podrá leer tu argumento, pero la búsqueda de temas afines conserva toda su precisión.
           </p>
         </div>
 
         <div class="p-3 bg-slate-50 rounded-lg border border-slate-100">
           <div class="font-bold text-slate-800 mb-1 flex items-center">
-            <i class="fas fa-server text-emerald-600 mr-1.5"></i> 4. Blindaje contra caídas y saturación (Zero-Crash)
+            <i class="fas fa-check-double text-emerald-600 mr-1.5"></i> 4. Siempre disponible
           </div>
           <p>
-            El catálogo base está precargado en tu navegador. Si la API internacional de OpenAlex se satura o se cae, Investigadopedia degrada silenciosamente y sigue entregándote el ranking completo de revistas sin bloquearte jamás.
+            El catálogo de revistas está integrado en la página. Si la conexión a bases internacionales se interrumpe, el buscador sigue entregándote el ranking completo de revistas sin fallar.
           </p>
         </div>
       </div>
 
       <div class="pt-2 text-xs text-slate-500 border-t border-slate-100 flex flex-wrap items-center justify-between gap-2">
-        <span><i class="fas fa-gem text-indigo-600 mr-1"></i> Modelo Acceso Abierto Diamante: Sin costo para quien lee ni para quien publica.</span>
-        <span class="font-mono text-slate-400">Auditable en GitHub &bull; Licencia MIT / Bien Público</span>
+        <span><i class="fas fa-gem text-indigo-600 mr-1"></i> Modelo Acceso Abierto Diamante: Revistas públicas y gratuitas para autores y lectores.</span>
+        <span class="text-slate-400">Iniciativa abierta &bull; Bien Público Iberoamericano</span>
       </div>
     </div>
 
@@ -255,13 +368,62 @@
   <footer class="bg-white border-t border-slate-200 py-6 text-center text-xs text-slate-500">
     <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-2">
       <div>
-        <strong>Investigadopedia Core v1.0.0</strong> &bull; Metodología abierta para investigar con IA.
+        <strong>Investigadopedia</strong> &bull; Ecosistema abierto para la investigación en Ciencias Sociales.
       </div>
       <div>
-        Diseñado por <a href="https://evegat.cl" class="font-medium text-indigo-600 hover:underline">Eduardo Vega</a> &bull; Ecosistema MyWorld.
+        Iniciativa impulsada por <a href="https://evegat.cl" class="font-medium text-indigo-600 hover:underline">Eduardo Vega</a> &bull; Ecosistema MyWorld.
       </div>
     </div>
   </footer>
+
+  <!-- Modal Detalle de Componente / Ficha estilo aitmpl -->
+  <div id="component-modal" class="fixed inset-0 z-50 hidden bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] flex flex-col shadow-2xl border border-slate-200 overflow-hidden">
+      <!-- Modal Header -->
+      <div class="p-5 border-b border-slate-100 flex items-start justify-between bg-slate-50">
+        <div class="flex items-center space-x-3">
+          <div id="modal-icon-container" class="w-10 h-10 rounded-xl bg-indigo-100 text-indigo-700 flex items-center justify-center text-lg shrink-0">
+            <i id="modal-icon" class="fas fa-cube"></i>
+          </div>
+          <div>
+            <div class="flex items-center space-x-2">
+              <span id="modal-category" class="text-xs px-2.5 py-0.5 rounded-full font-bold bg-slate-200 text-slate-700">Categoría</span>
+              <span id="modal-type" class="text-xs text-slate-400 font-medium">Tipo</span>
+            </div>
+            <h3 id="modal-title" class="font-bold text-slate-900 text-base mt-0.5">Título</h3>
+          </div>
+        </div>
+        <button type="button" onclick="closeModal()" class="text-slate-400 hover:text-slate-700 p-1 rounded-lg transition-colors">
+          <i class="fas fa-times text-base"></i>
+        </button>
+      </div>
+
+      <!-- Modal Body (Scrollable) -->
+      <div class="p-6 overflow-y-auto space-y-4 text-xs text-slate-700 leading-relaxed">
+        <div>
+          <h4 class="font-bold text-slate-900 text-xs uppercase tracking-wider mb-1">Descripción y Propósito</h4>
+          <p id="modal-desc" class="text-slate-600 leading-relaxed text-xs"></p>
+        </div>
+
+        <div id="modal-tags-container" class="flex flex-wrap gap-1.5 pt-1">
+          <!-- Tags dinámicos -->
+        </div>
+
+        <!-- Bloque de Prompt o Enlaces -->
+        <div id="modal-action-box" class="pt-3 border-t border-slate-100">
+          <!-- Rellenado dinámico -->
+        </div>
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="p-4 bg-slate-50 border-t border-slate-100 flex items-center justify-between">
+        <span id="modal-author" class="text-xs text-slate-400">Eduardo Vega &bull; MyWorld</span>
+        <button type="button" onclick="closeModal()" class="px-4 py-2 bg-slate-200 hover:bg-slate-300 text-slate-800 font-bold rounded-lg text-xs transition-colors">
+          Cerrar
+        </button>
+      </div>
+    </div>
+  </div>
 
   <script src="./app.js"></script>
 </body>

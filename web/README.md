@@ -1,6 +1,6 @@
 # Investigadopedia Match Web — Despliegue en `investigadopedia.evegat.cl`
 
-Aplicación web estática client-side (JANE Latam Ciencias Sociales e Iberoamérica).
+Buscador y recomendador de revistas diamantinas para Ciencias Sociales e Iberoamérica.
 
 ## Arquitectura
 - **Frontend**: HTML5, Tailwind CSS CDN, Inter/Merriweather, FontAwesome.
