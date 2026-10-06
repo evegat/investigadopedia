@@ -12,7 +12,9 @@ personas:
 proximo_paso: "Levantar y curar fuentes sobre investigacion asistida por IA, partiendo por Feynman, y traducir sus patrones a lenguaje hispanoamericano"
 criterio_terminado: "Biblioteca curada con fichas de fuentes, conceptos acunados, traduccion/adaptacion hispana y patrones reutilizables para Investigadopedia"
 fecha_limite:
-actualizado: 2026-09-10
+actualizado: 2026-10-06
+url_produccion: "https://investigadopedia.evegat.cl"
+repositorio: "https://github.com/evegat/investigadopedia"
 referencia_externa: "2 - Project/EDI001 - Investigadopedia/PRD Investigadopedia.md"
 ---
 
@@ -85,7 +87,7 @@ La curaduría no debe ser traducción literal. Cada fuente se procesa en cuatro 
     4.  *Vigilancia Epistemológica*: Auditoría automatizada de manuscritos para garantizar distinción categórica Hecho/Inferencia/Supuesto.
     5.  *Reporte PRISMA 2020*: Generación instantánea de diagramas de flujo Mermaid y tablas de exclusión reproducibles.
     6.  *Match JANE Latam (Ciencias Sociales)*: Estimador semántico de revistas Acceso Abierto Diamante (SciELO, Redalyc, Latindex 2.0) y extracción de revisores pares en vivo (`--live-authors`) vía OpenAlex, con anonimización local (`scramble`).
-*   **Estado actual**: Core autónomo probado con suite de 13 pruebas de regresión unitarias verdes (`test_core.py` y `test_match.py`). Listo para distribuir como paquete pip o integrar a la Cartera de publicaciones (`PUB###`).
+*   **Estado actual**: En producción en `https://investigadopedia.evegat.cl` (Coolify VPS + Cloudflare SSL). Repositorio oficial sincronizado en `evegat/investigadopedia`. Suite completa de 17 pruebas unitarias verdes bajo arnés MyWorld v1. Listo para uso de terceros.
 
 ---
 

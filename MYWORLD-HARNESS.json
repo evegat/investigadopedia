@@ -12,13 +12,15 @@
     "internal"
   ],
   "deployment": {
-    "state": "local",
-    "production_urls": []
+    "state": "production",
+    "production_urls": [
+      "https://investigadopedia.evegat.cl"
+    ]
   },
   "repository": {
     "type": "git",
     "default_branch": "main",
-    "remote_policy": "pending"
+    "remote_policy": "synced"
   },
   "commands": {
     "quality": [
