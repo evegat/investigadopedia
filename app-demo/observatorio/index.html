@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Investigadopedia Observatorio</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-mark">I</div>
+          <div>
+            <strong>Investigadopedia</strong>
+            <span>Observatorio IA</span>
+          </div>
+        </div>
+        <nav id="stageNav" class="stage-nav"></nav>
+        <div class="public-good">
+          <strong>Bien publico open source</strong>
+          <p>Curaduria, trazabilidad y auditoria para investigar con IA sin delegar criterio.</p>
+        </div>
+      </aside>
+
+      <main class="workspace">
+        <header class="topbar">
+          <div>
+            <h1>Observatorio curador de apoyos IA para investigar</h1>
+            <p>Catalogo por etapa, riesgos, resguardos y ficha exportable.</p>
+          </div>
+          <div class="top-actions">
+            <input id="searchInput" type="search" placeholder="Buscar herramienta, riesgo o uso">
+            <button id="exportBtn" type="button">Exportar ficha</button>
+          </div>
+        </header>
+
+        <section class="content-grid">
+          <section class="catalog-panel">
+            <div class="panel-head">
+              <div>
+                <h2>Catalogo curado</h2>
+                <p id="catalogCount">Cargando fuentes...</p>
+              </div>
+              <select id="licenseFilter">
+                <option value="all">Todas las licencias</option>
+                <option value="open">Open source</option>
+                <option value="closed">Cerradas/freemium</option>
+              </select>
+            </div>
+            <div id="toolList" class="tool-list"></div>
+          </section>
+
+          <section class="detail-panel">
+            <div class="panel-head">
+              <div>
+                <h2 id="detailName">Selecciona una fuente</h2>
+                <p id="detailType">Revision inicial del observatorio</p>
+              </div>
+              <span id="detailMaturity" class="status">pendiente</span>
+            </div>
+            <dl class="evidence-list">
+              <div>
+                <dt>Hecho observado</dt>
+                <dd id="detailEvidence"></dd>
+              </div>
+              <div>
+                <dt>Mejor uso</dt>
+                <dd id="detailBestFor"></dd>
+              </div>
+              <div>
+                <dt>Riesgo</dt>
+                <dd id="detailRisk"></dd>
+              </div>
+              <div>
+                <dt>Resguardo</dt>
+                <dd id="detailGuardrail"></dd>
+              </div>
+            </dl>
+            <a id="detailSource" href="#" target="_blank" rel="noreferrer">Abrir fuente</a>
+          </section>
+        </section>
+      </main>
+
+      <aside class="auditor">
+        <div class="auditor-head">
+          <h2>Chat auditor</h2>
+          <p>Mock local. No envia datos a modelos externos.</p>
+        </div>
+        <label for="projectInput">Proyecto de investigacion</label>
+        <textarea id="projectInput" rows="7">Quiero investigar como investigadores hispanohablantes usan IA para revisar literatura sin perder trazabilidad metodologica.</textarea>
+        <button id="auditBtn" type="button">Auditar seleccion</button>
+        <div id="chatLog" class="chat-log"></div>
+      </aside>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
+

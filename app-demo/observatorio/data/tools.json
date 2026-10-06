@@ -1,0 +1,94 @@
+[
+  {
+    "id": "feynman",
+    "name": "Feynman",
+    "type": "agente open source",
+    "license": "MIT declarada en package.json",
+    "stages": ["literatura", "escritura", "auditoria"],
+    "evidence": "Repositorio y sitio oficial lo describen como agente de investigacion open source con roles researcher, reviewer, writer y verifier.",
+    "bestFor": "Benchmark de arquitectura multiagente y separacion de roles.",
+    "risk": "Puede reforzar la idea de delegar investigacion completa al agente.",
+    "guardrail": "Usar como referencia de roles; exigir sidecar de procedencia y validacion humana.",
+    "maturity": "alto interes",
+    "source": "https://github.com/companion-inc/feynman"
+  },
+  {
+    "id": "elicit",
+    "name": "Elicit",
+    "type": "SaaS investigacion",
+    "license": "cerrada",
+    "stages": ["literatura"],
+    "evidence": "La pagina oficial declara soporte para refinar protocolo, reunir fuentes, hacer screening, extraer datos y sintetizar evidencia.",
+    "bestFor": "Revision sistematica asistida y extraccion estructurada.",
+    "risk": "Cobertura incompleta o sesgo de seleccion si se usa como reemplazo de revision humana.",
+    "guardrail": "Validar estrategia de busqueda, criterios de inclusion/exclusion y papers descartados.",
+    "maturity": "producto estable",
+    "source": "https://elicit.com/solutions/systematic-review"
+  },
+  {
+    "id": "consensus",
+    "name": "Consensus",
+    "type": "buscador academico IA",
+    "license": "cerrada",
+    "stages": ["literatura"],
+    "evidence": "El sitio oficial declara busqueda y analisis sobre literatura revisada por pares y millones de papers.",
+    "bestFor": "Exploracion inicial de evidencia y busqueda de papers verificables.",
+    "risk": "Tomar la sintesis como conclusion sin leer estudios base.",
+    "guardrail": "Citar solo despues de abrir y revisar papers relevantes.",
+    "maturity": "producto estable",
+    "source": "https://consensus.app/search/"
+  },
+  {
+    "id": "scispace",
+    "name": "SciSpace",
+    "type": "asistente de literatura y PDFs",
+    "license": "cerrada",
+    "stages": ["literatura", "escritura"],
+    "evidence": "La pagina oficial lo presenta como asistente IA para academicos, revision de literatura y escritura con fuentes citadas.",
+    "bestFor": "Lectura asistida de papers y extraccion de metodo/hallazgos.",
+    "risk": "Resumir mal resultados o limitaciones finas.",
+    "guardrail": "Comparar resumen con metodo, resultados y limitaciones del PDF.",
+    "maturity": "producto estable",
+    "source": "https://scispace.com/"
+  },
+  {
+    "id": "researchrabbit",
+    "name": "ResearchRabbit",
+    "type": "mapeo de literatura",
+    "license": "cerrada/gratis",
+    "stages": ["literatura"],
+    "evidence": "El sitio oficial lo posiciona para encontrar papers relacionados, mapas de citacion y tendencias.",
+    "bestFor": "Descubrir redes de papers y autores.",
+    "risk": "Confundir centralidad de citacion con pertinencia metodologica.",
+    "guardrail": "Usarlo junto a criterios de busqueda explicitos.",
+    "maturity": "producto estable",
+    "source": "https://www.researchrabbit.ai/"
+  },
+  {
+    "id": "litmaps",
+    "name": "Litmaps",
+    "type": "mapeo y monitoreo",
+    "license": "cerrada/freemium",
+    "stages": ["literatura"],
+    "evidence": "El sitio oficial declara descubrimiento, visualizacion, colaboracion y monitoreo de literatura.",
+    "bestFor": "Vigilancia bibliografica y seguimiento de campo.",
+    "risk": "Sobrerrepresentar papers conectados a una semilla estrecha.",
+    "guardrail": "Registrar semillas, criterios y busquedas complementarias.",
+    "maturity": "producto estable",
+    "source": "https://www.litmaps.com/"
+  },
+  {
+    "id": "notebooklm",
+    "name": "NotebookLM",
+    "type": "cuaderno con fuentes",
+    "license": "cerrada",
+    "stages": ["literatura", "escritura", "auditoria"],
+    "evidence": "Herramienta de Google para trabajar sobre fuentes cargadas en un notebook.",
+    "bestFor": "Sintesis y preguntas sobre corpus cerrado.",
+    "risk": "El modelo parece confiable si las fuentes cargadas son pobres o sesgadas.",
+    "guardrail": "Curar corpus antes de consultar; registrar que fuentes entraron y cuales quedaron fuera.",
+    "maturity": "producto estable",
+    "source": "https://notebooklm.google/"
+  }
+]
+

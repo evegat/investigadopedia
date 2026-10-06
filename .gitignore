@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+*$py.class
+*.env
+.env*
+.myworld-harness/evidence/
+.myworld-harness/cache/
+*.gdoc
+data/raw/
+node_modules/
+Proyecto Paper +app InvestigadopedIA/
+*.pdf
+.DS_Store
+Thumbs.db
+desktop.ini

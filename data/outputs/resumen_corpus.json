@@ -1,0 +1,13 @@
+{
+  "total_tools": 8,
+  "by_type": {
+    "agente_open_source": 1,
+    "saas_investigacion": 1,
+    "buscador_ia": 1,
+    "asistente_lectura": 1,
+    "mapa_literatura": 2,
+    "cuaderno_fuentes": 1,
+    "repo_open_source": 1
+  },
+  "generated_by": "Gate 3 Reproducible Analysis"
+}

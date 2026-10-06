@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "investigadopedia"
+version = "1.0.0"
+authors = [
+  { name="Eduardo Vega", email="eduardo@myworld.local" },
+]
+description = "Investigadopedia: Autonomous Scientific Research Harness & Toolkit"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+]
+
+[project.scripts]
+investigadopedia = "investigadopedia.cli:main"

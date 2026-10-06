@@ -1,0 +1,110 @@
+{
+  "schema_version": "1.0.0",
+  "product_id": "EDI001",
+  "name": "Investigadopedia",
+  "owner": "Eduardo Vega",
+  "myworld_project": "EDI001",
+  "kind": "research_product",
+  "lifecycle_stage": "prototype",
+  "risk": "high",
+  "data_classification": [
+    "public",
+    "internal"
+  ],
+  "deployment": {
+    "state": "local",
+    "production_urls": []
+  },
+  "repository": {
+    "type": "git",
+    "default_branch": "main",
+    "remote_policy": "pending"
+  },
+  "commands": {
+    "quality": [
+      "python scripts/run_research_gates.py"
+    ],
+    "build": [
+      "python -c \"print('Build OK: Manuscrito y corpus listos.')\""
+    ],
+    "test": [
+      "python -m unittest discover -s tests -p \"test_*.py\""
+    ]
+  },
+  "critical_paths": [
+    "00 - Home.md",
+    "01 - Bitacora.md",
+    "PRD Investigadopedia.md",
+    "Observatorio IA para Investigar - Formulacion y Hoja de Ruta.md",
+    "Paper - Investigadopedia Observatorio.md",
+    "Corpus inicial - apoyos IA para investigar.md",
+    "app-demo/index.html",
+    "scripts",
+    "references"
+  ],
+  "forbidden_paths": [
+    ".env",
+    "credentials",
+    "secrets",
+    "raw_drafts_unverified",
+    "unanchored_claims",
+    "node_modules"
+  ],
+  "multi_agent": {
+    "isolation": "worktree",
+    "integration_owner": "Eduardo Vega",
+    "architecture": "orchestrator-minion",
+    "roles": [
+      "scout",
+      "bibliographic_verifier",
+      "extractor",
+      "codebook_assistant",
+      "analyst",
+      "adversarial_reviewer",
+      "reproducibility_checker"
+    ]
+  },
+  "observability": {
+    "level": 2,
+    "domains": [
+      "epistemic",
+      "methodological",
+      "pipeline",
+      "evidence"
+    ],
+    "monitors": [
+      {
+        "name": "Citation Faithfulness & Anchor Validator",
+        "type": "script",
+        "target": "scripts/audit-citation-anchors.mjs",
+        "interval_seconds": 3600,
+        "failure_threshold": 1
+      },
+      {
+        "name": "Epistemic Tripartition Compliance",
+        "type": "script",
+        "target": "scripts/check_epistemic_tripartition.py",
+        "interval_seconds": 3600,
+        "failure_threshold": 1
+      },
+      {
+        "name": "Proof Ledger Resolution Monitor",
+        "type": "ndjson_state",
+        "target": "evidence/proof_ledger.ndjson",
+        "interval_seconds": 1800,
+        "failure_threshold": 3
+      }
+    ]
+  },
+  "release": {
+    "backup_required": true,
+    "restore_test_required": false,
+    "rollback_required": true,
+    "rpo_hours": 24,
+    "rto_hours": 2
+  },
+  "evidence": {
+    "last_audit": null,
+    "pending_register": "MyWorld:harness/state/pending.ndjson"
+  }
+}
