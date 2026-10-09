@@ -25,6 +25,7 @@ Proyecto de metodología aplicada sobre el uso responsable de Inteligencia Artif
 Giro de enfoque 2026-06-15: Investigadopedia pasa a operar también como una biblioteca curada sobre investigar. La prioridad inmediata no es solo construir una app, sino levantar, acuñar, traducir y ordenar contenidos, herramientas, flujos y criterios sobre investigación, llevándolos a un lenguaje hispanoamericano claro, exigente y metodológicamente útil.
 
 Registro operativo: [[Registro de Iniciativas]]
+Hoja de ruta y backlog: [[Features y Hoja de Ruta - Investigadopedia]]
 Línea de curaduría: [[Curaduria de Investigacion Hispanohablante]]
 Avance observatorio: [[Observatorio IA para Investigar - Formulacion y Hoja de Ruta]]
 Paper vivo: [[Paper - Investigadopedia Observatorio]]
@@ -86,8 +87,8 @@ La curaduría no debe ser traducción literal. Cada fuente se procesa en cuatro 
     3.  *Screening Jev*: Clasificación masiva de abstracts a $0.042/1M tokens (<300ms) con fallback heurístico determinista.
     4.  *Vigilancia Epistemológica*: Auditoría automatizada de manuscritos para garantizar distinción categórica Hecho/Inferencia/Supuesto.
     5.  *Reporte PRISMA 2020*: Generación instantánea de diagramas de flujo Mermaid y tablas de exclusión reproducibles.
-    6.  *Match JANE Latam (Ciencias Sociales)*: Estimador semántico de revistas Acceso Abierto Diamante (SciELO, Redalyc, Latindex 2.0) y extracción de revisores pares en vivo (`--live-authors`) vía OpenAlex, con anonimización local (`scramble`).
-*   **Estado actual**: En producción en `https://investigadopedia.evegat.cl` (Coolify VPS + Cloudflare SSL). Repositorio oficial sincronizado en `evegat/investigadopedia`. Suite completa de 17 pruebas unitarias verdes bajo arnés MyWorld v1. Listo para uso de terceros.
+    6.  *Dónde Publicar y Catálogo de Habilidades (Estilo aitmpl)*: Recomendador de revistas Acceso Abierto Diamante (SciELO, Redalyc, Latindex 2.0), extracción de pares revisores vía OpenAlex con privacidad en el cliente, y catálogo interactivo de habilidades, prompts tutores y observatorios abiertos con copia de un clic.
+*   **Estado actual**: En producción en `https://investigadopedia.evegat.cl` (Coolify VPS + Cloudflare SSL). Repositorio oficial sincronizado en `evegat/investigadopedia`. Suite completa de 22 pruebas unitarias verdes bajo arnés MyWorld v1. Listo para uso de terceros.
 
 ---
 
@@ -100,6 +101,6 @@ La curaduría no debe ser traducción literal. Cada fuente se procesa en cuatro 
 - [x] Preparar análisis experto simulado, rutas de financiamiento y destinos de publicación. <!-- myworld-task:1e7ce1c7ce -->
 - [x] Paquetizar Investigadopedia Core v1.0.0 autónomo (`harvest`, `dedup`, `screen`, `epistemic`, `prisma`). <!-- myworld-task:c01e1001a1 -->
 - [x] Publicar router agéntico unificado en `.agents/skills/investigadopedia/SKILL.md`. <!-- myworld-task:c01e1002a2 -->
-- [x] Implementar módulo Match (JANE Latam para Ciencias Sociales en Iberoamérica) con scramble y filtro Diamante. <!-- myworld-task:c01e1004a4 -->
+- [x] Implementar módulo Dónde Publicar y Catálogo de Habilidades/Repositorios estilo aitmpl en la web pública. <!-- myworld-task:c01e1004a4 -->
 - [ ] Incorporar conectores adicionales de literatura (arXiv preprint harvester y Crossref DOI resolver directo). <!-- myworld-task:c01e1003a3 -->
 

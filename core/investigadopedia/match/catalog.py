@@ -43,28 +43,29 @@ class LatamJournal:
         }
 
 
-# Colección curada representativa de revistas líderes en Iberoamérica
+# Colección curada representativa de revistas líderes en Iberoamérica (21 títulos verificados)
 CURATED_JOURNALS: List[LatamJournal] = [
     LatamJournal(
         title="EURE - Revista Latinoamericana de Estudios Urbano Regionales",
-        issn="0717-6996",
+        issn="0717-6236",
         country="Chile",
         publisher="Pontificia Universidad Católica de Chile",
         disciplines=["estudios_urbanos", "politicas_publicas", "geografia", "sociologia"],
         focus_keywords=["urbano", "ciudad", "territorio", "segregacion", "vivienda", "gobernanza", "metropolitana", "planificacion", "politica urbana"],
         indexing=["scielo", "redalyc", "latindex", "wos", "scopus"],
         is_diamond_oa=True,
-        url="http://www.eure.cl",
+        url="https://www.eure.cl",
     ),
     LatamJournal(
         title="Revista de Ciencia Política (Santiago)",
-        issn="0718-2236",
+        issn="0718-090X",
         country="Chile",
         publisher="Pontificia Universidad Católica de Chile",
         disciplines=["ciencia_politica", "politicas_publicas", "relaciones_internacionales"],
         focus_keywords=["democracia", "instituciones", "elecciones", "partidos", "estado", "gobernabilidad", "reforma", "politica comparada", "poder"],
         indexing=["scielo", "redalyc", "latindex", "wos", "scopus"],
         is_diamond_oa=True,
+        url="https://revistacienciapolitica.uc.cl",
     ),
     LatamJournal(
         title="Revista Mexicana de Sociología",
@@ -75,6 +76,7 @@ CURATED_JOURNALS: List[LatamJournal] = [
         focus_keywords=["sociologia", "movimientos sociales", "desigualdad", "estructura social", "identidad", "cultura", "estratificacion", "ciudadania", "cohesion social"],
         indexing=["scielo", "redalyc", "latindex", "wos", "scopus"],
         is_diamond_oa=True,
+        url="http://revistamexicanadesociologia.unam.mx",
     ),
     LatamJournal(
         title="Perfiles Educativos",
@@ -85,6 +87,7 @@ CURATED_JOURNALS: List[LatamJournal] = [
         focus_keywords=["educacion", "docencia", "politica educativa", "universidad", "curriculo", "aprendizaje", "escuela", "estudiantes", "gasto publico educacion"],
         indexing=["scielo", "redalyc", "latindex", "scopus"],
         is_diamond_oa=True,
+        url="https://perfileseducativos.unam.mx",
     ),
     LatamJournal(
         title="Revista CEPAL",
@@ -95,6 +98,7 @@ CURATED_JOURNALS: List[LatamJournal] = [
         focus_keywords=["desarrollo", "crecimiento", "pobreza", "comercio", "politica fiscal", "gasto publico", "productividad", "macroeconomia", "desigualdad"],
         indexing=["scielo", "redalyc", "latindex", "wos", "scopus"],
         is_diamond_oa=True,
+        url="https://www.cepal.org/es/publicaciones/tipo/revista-cepal",
     ),
     LatamJournal(
         title="Revista INVI",
@@ -105,6 +109,7 @@ CURATED_JOURNALS: List[LatamJournal] = [
         focus_keywords=["habitat", "vivienda social", "territorio", "ciudad", "barrio", "comunidad", "asentamientos", "segregacion", "espacio publico"],
         indexing=["scielo", "redalyc", "latindex", "scopus"],
         is_diamond_oa=True,
+        url="https://revistainvi.uchile.cl",
     ),
     LatamJournal(
         title="Estudios Sociológicos",
@@ -115,6 +120,7 @@ CURATED_JOURNALS: List[LatamJournal] = [
         focus_keywords=["sociologia", "teoria social", "trabajo", "genero", "migracion", "clases sociales", "accion colectiva", "politica"],
         indexing=["scielo", "redalyc", "latindex", "wos", "scopus"],
         is_diamond_oa=True,
+        url="https://estudiossociologicos.colmex.mx",
     ),
     LatamJournal(
         title="Revista Colombiana de Sociología",
@@ -125,6 +131,7 @@ CURATED_JOURNALS: List[LatamJournal] = [
         focus_keywords=["violencia", "conflicto", "paz", "memoria", "comunidades", "territorio", "sociologia critica", "epistemologia"],
         indexing=["scielo", "redalyc", "latindex"],
         is_diamond_oa=True,
+        url="https://revistas.unal.edu.co/index.php/recs",
     ),
     LatamJournal(
         title="Gestión y Política Pública",
@@ -135,6 +142,7 @@ CURATED_JOURNALS: List[LatamJournal] = [
         focus_keywords=["gestion publica", "politicas publicas", "evaluacion", "burocracia", "transparencia", "rendicion de cuentas", "innovacion publica"],
         indexing=["scielo", "redalyc", "latindex", "scopus"],
         is_diamond_oa=True,
+        url="http://www.gestionypoliticapublica.cide.edu",
     ),
     LatamJournal(
         title="Polis (Santiago)",
@@ -145,6 +153,7 @@ CURATED_JOURNALS: List[LatamJournal] = [
         focus_keywords=["sustentabilidad", "desarrollo local", "medio ambiente", "sociedad civil", "derechos humanos", "critica social"],
         indexing=["scielo", "redalyc", "latindex"],
         is_diamond_oa=True,
+        url="https://polis.ulagos.cl",
     ),
     LatamJournal(
         title="Revista de Administração Pública (RAP)",
@@ -155,6 +164,7 @@ CURATED_JOURNALS: List[LatamJournal] = [
         focus_keywords=["administracao publica", "governanca", "politicas publicas", "reforma do estado", "orcamento", "sociedade civil"],
         indexing=["scielo", "redalyc", "latindex", "wos", "scopus"],
         is_diamond_oa=True,
+        url="https://bibliotecadigital.fgv.br/ojs/index.php/rap",
     ),
     LatamJournal(
         title="Dados - Revista de Ciências Sociais",
@@ -165,6 +175,7 @@ CURATED_JOURNALS: List[LatamJournal] = [
         focus_keywords=["ciencias sociais", "politica", "democracia", "desigualdade", "instituicoes", "eleicoes", "sociedade"],
         indexing=["scielo", "redalyc", "latindex", "wos", "scopus"],
         is_diamond_oa=True,
+        url="http://dados.iesp.uerj.br",
     ),
     LatamJournal(
         title="Revista Española de Investigaciones Sociológicas (REIS)",
@@ -175,6 +186,7 @@ CURATED_JOURNALS: List[LatamJournal] = [
         focus_keywords=["sociologia", "encuestas", "estructura social", "comportamiento politico", "metodologia cuantitativa", "estratificacion"],
         indexing=["scielo", "latindex", "wos", "scopus"],
         is_diamond_oa=True,
+        url="https://reis.cis.es",
     ),
     LatamJournal(
         title="Desarrollo Económico - Revista de Ciencias Sociales",
@@ -185,6 +197,7 @@ CURATED_JOURNALS: List[LatamJournal] = [
         focus_keywords=["desarrollo economico", "industria", "empleo", "inflacion", "politica economica", "distribucion del ingreso"],
         indexing=["scielo", "latindex", "scopus"],
         is_diamond_oa=True,
+        url="https://ides.org.ar/desarrollo-economico/",
     ),
     LatamJournal(
         title="Revista de Estudios Sociales",
@@ -195,6 +208,7 @@ CURATED_JOURNALS: List[LatamJournal] = [
         focus_keywords=["cultura", "memoria", "etnografia", "conflicto social", "violencia", "identidades", "postconflicto"],
         indexing=["scielo", "redalyc", "latindex", "wos", "scopus"],
         is_diamond_oa=True,
+        url="https://revistas.uniandes.edu.co/journal/res",
     ),
     LatamJournal(
         title="Economía, Sociedad y Territorio",
@@ -205,6 +219,7 @@ CURATED_JOURNALS: List[LatamJournal] = [
         focus_keywords=["territorio", "desarrollo regional", "ciudades intermedias", "sustentabilidad", "empleo regional", "planeacion"],
         indexing=["scielo", "redalyc", "latindex", "scopus"],
         is_diamond_oa=True,
+        url="https://est.cmq.edu.mx",
     ),
     LatamJournal(
         title="Iconos. Revista de Ciencias Sociales",
@@ -215,6 +230,7 @@ CURATED_JOURNALS: List[LatamJournal] = [
         focus_keywords=["movimientos sociales", "extractivismo", "indigenismo", "estado", "genero", "ecologia politica", "democracia"],
         indexing=["scielo", "redalyc", "latindex", "wos", "scopus"],
         is_diamond_oa=True,
+        url="https://revistas.flacsoandes.edu.ec/iconos",
     ),
     LatamJournal(
         title="Revista del CLAD Reforma y Democracia",
@@ -225,6 +241,7 @@ CURATED_JOURNALS: List[LatamJournal] = [
         focus_keywords=["gestion publica", "servicio civil", "reforma del estado", "gobernanza digital", "gobierno abierto", "politicas publicas"],
         indexing=["scielo", "redalyc", "latindex", "scopus"],
         is_diamond_oa=True,
+        url="https://clad.org/reforma-y-democracia/",
     ),
     LatamJournal(
         title="Revista Mexicana de Ciencias Políticas y Sociales",
@@ -235,6 +252,7 @@ CURATED_JOURNALS: List[LatamJournal] = [
         focus_keywords=["ciencia politica", "partidos politicos", "sistema politico", "comunicacion politica", "seguridad", "relaciones internacionales"],
         indexing=["scielo", "redalyc", "latindex", "wos", "scopus"],
         is_diamond_oa=True,
+        url="https://revistas.unam.mx/index.php/rmcpys",
     ),
     LatamJournal(
         title="Revista Austral de Ciencias Sociales",
@@ -245,6 +263,7 @@ CURATED_JOURNALS: List[LatamJournal] = [
         focus_keywords=["pueblos originarios", "territorios del sur", "patrimonio", "antropologia", "conflicto socioambiental"],
         indexing=["scielo", "redalyc", "latindex"],
         is_diamond_oa=True,
+        url="http://revistas.uach.cl/index.php/racs",
     ),
     LatamJournal(
         title="Revista Katálysis",
@@ -255,6 +274,7 @@ CURATED_JOURNALS: List[LatamJournal] = [
         focus_keywords=["politica social", "servico social", "direitos humanos", "trabalho", "questao social", "saude publica"],
         indexing=["scielo", "redalyc", "latindex", "scopus"],
         is_diamond_oa=True,
+        url="https://periodicos.ufsc.br/index.php/katalysis",
     ),
 ]
 

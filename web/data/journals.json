@@ -1,7 +1,7 @@
 [
   {
     "title": "EURE - Revista Latinoamericana de Estudios Urbano Regionales",
-    "issn": "0717-6996",
+    "issn": "0717-6236",
     "country": "Chile",
     "publisher": "Pontificia Universidad Católica de Chile",
     "disciplines": [
@@ -29,11 +29,11 @@
       "scopus"
     ],
     "is_diamond_oa": true,
-    "url": "http://www.eure.cl"
+    "url": "https://www.eure.cl"
   },
   {
     "title": "Revista de Ciencia Política (Santiago)",
-    "issn": "0718-2236",
+    "issn": "0718-090X",
     "country": "Chile",
     "publisher": "Pontificia Universidad Católica de Chile",
     "disciplines": [
@@ -60,7 +60,7 @@
       "scopus"
     ],
     "is_diamond_oa": true,
-    "url": null
+    "url": "https://revistacienciapolitica.uc.cl"
   },
   {
     "title": "Revista Mexicana de Sociología",
@@ -90,7 +90,7 @@
       "scopus"
     ],
     "is_diamond_oa": true,
-    "url": null
+    "url": "http://revistamexicanadesociologia.unam.mx"
   },
   {
     "title": "Perfiles Educativos",
@@ -120,7 +120,7 @@
       "scopus"
     ],
     "is_diamond_oa": true,
-    "url": null
+    "url": "https://perfileseducativos.unam.mx"
   },
   {
     "title": "Revista CEPAL",
@@ -151,7 +151,7 @@
       "scopus"
     ],
     "is_diamond_oa": true,
-    "url": null
+    "url": "https://www.cepal.org/es/publicaciones/tipo/revista-cepal"
   },
   {
     "title": "Revista INVI",
@@ -181,7 +181,7 @@
       "scopus"
     ],
     "is_diamond_oa": true,
-    "url": null
+    "url": "https://revistainvi.uchile.cl"
   },
   {
     "title": "Estudios Sociológicos",
@@ -210,7 +210,7 @@
       "scopus"
     ],
     "is_diamond_oa": true,
-    "url": null
+    "url": "https://estudiossociologicos.colmex.mx"
   },
   {
     "title": "Revista Colombiana de Sociología",
@@ -237,7 +237,7 @@
       "latindex"
     ],
     "is_diamond_oa": true,
-    "url": null
+    "url": "https://revistas.unal.edu.co/index.php/recs"
   },
   {
     "title": "Gestión y Política Pública",
@@ -264,7 +264,7 @@
       "scopus"
     ],
     "is_diamond_oa": true,
-    "url": null
+    "url": "http://www.gestionypoliticapublica.cide.edu"
   },
   {
     "title": "Polis (Santiago)",
@@ -290,7 +290,7 @@
       "latindex"
     ],
     "is_diamond_oa": true,
-    "url": null
+    "url": "https://polis.ulagos.cl"
   },
   {
     "title": "Revista de Administração Pública (RAP)",
@@ -317,7 +317,7 @@
       "scopus"
     ],
     "is_diamond_oa": true,
-    "url": null
+    "url": "https://bibliotecadigital.fgv.br/ojs/index.php/rap"
   },
   {
     "title": "Dados - Revista de Ciências Sociais",
@@ -346,7 +346,7 @@
       "scopus"
     ],
     "is_diamond_oa": true,
-    "url": null
+    "url": "http://dados.iesp.uerj.br"
   },
   {
     "title": "Revista Española de Investigaciones Sociológicas (REIS)",
@@ -373,7 +373,7 @@
       "scopus"
     ],
     "is_diamond_oa": true,
-    "url": null
+    "url": "https://reis.cis.es"
   },
   {
     "title": "Desarrollo Económico - Revista de Ciencias Sociales",
@@ -399,7 +399,7 @@
       "scopus"
     ],
     "is_diamond_oa": true,
-    "url": null
+    "url": "https://ides.org.ar/desarrollo-economico/"
   },
   {
     "title": "Revista de Estudios Sociales",
@@ -428,7 +428,7 @@
       "scopus"
     ],
     "is_diamond_oa": true,
-    "url": null
+    "url": "https://revistas.uniandes.edu.co/journal/res"
   },
   {
     "title": "Economía, Sociedad y Territorio",
@@ -455,7 +455,7 @@
       "scopus"
     ],
     "is_diamond_oa": true,
-    "url": null
+    "url": "https://est.cmq.edu.mx"
   },
   {
     "title": "Iconos. Revista de Ciencias Sociales",
@@ -484,7 +484,7 @@
       "scopus"
     ],
     "is_diamond_oa": true,
-    "url": null
+    "url": "https://revistas.flacsoandes.edu.ec/iconos"
   },
   {
     "title": "Revista del CLAD Reforma y Democracia",
@@ -510,7 +510,7 @@
       "scopus"
     ],
     "is_diamond_oa": true,
-    "url": null
+    "url": "https://clad.org/reforma-y-democracia/"
   },
   {
     "title": "Revista Mexicana de Ciencias Políticas y Sociales",
@@ -538,7 +538,7 @@
       "scopus"
     ],
     "is_diamond_oa": true,
-    "url": null
+    "url": "https://revistas.unam.mx/index.php/rmcpys"
   },
   {
     "title": "Revista Austral de Ciencias Sociales",
@@ -563,7 +563,7 @@
       "latindex"
     ],
     "is_diamond_oa": true,
-    "url": null
+    "url": "http://revistas.uach.cl/index.php/racs"
   },
   {
     "title": "Revista Katálysis",
@@ -590,6 +590,6 @@
       "scopus"
     ],
     "is_diamond_oa": true,
-    "url": null
+    "url": "https://periodicos.ufsc.br/index.php/katalysis"
   }
 ]

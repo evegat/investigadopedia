@@ -276,7 +276,9 @@ function renderResults(results) {
     tr.innerHTML = `
       <td class="p-4 font-bold text-slate-400">#${idx + 1}</td>
       <td class="p-4">
-        <div class="font-bold text-slate-900">${escapeHtml(j.title)}</div>
+        <div class="font-bold text-slate-900">
+          ${j.url ? `<a href="${escapeHtml(j.url)}" target="_blank" class="hover:text-indigo-600 hover:underline inline-flex items-center gap-1.5">${escapeHtml(j.title)} <i class="fas fa-arrow-up-right-from-square text-[10px] text-slate-400"></i></a>` : escapeHtml(j.title)}
+        </div>
         <div class="text-xs text-slate-500">${escapeHtml(j.publisher)} &bull; <span class="font-mono">ISSN: ${escapeHtml(j.issn)}</span></div>
         <div class="mt-1 flex flex-wrap gap-1">${badges}</div>
       </td>
@@ -353,35 +355,35 @@ const DEFAULT_ROADMAP = [
     id: "cover_letter",
     title: "Generador de Carta al Editor (Cover Letter)",
     desc: "Redacta el borrador formal de la carta de postulación justificando la afinidad del manuscrito con la revista elegida y adjuntando la terna de revisores sugeridos sin conflicto de interés.",
-    baseVotes: 24,
+    baseVotes: 0,
     tag: "Productividad"
   },
   {
     id: "response_times",
     title: "Estimador de Tiempos de Respuesta y Arbitraje",
     desc: "Muestra meses promedio reportados entre la sumisión inicial, el dictamen y la publicación final para que decidas con base en tus plazos de graduación o postulación a proyectos.",
-    baseVotes: 19,
+    baseVotes: 0,
     tag: "Toma de decisiones"
   },
   {
     id: "author_guidelines",
     title: "Pautas de Autor y Enlace directo a OJS",
     desc: "Muestra en un clic el límite de palabras, normas de citación (APA 7, Chicago, Harvard) y link directo a la plataforma de envíos de la revista seleccionada.",
-    baseVotes: 15,
+    baseVotes: 0,
     tag: "Facilidad de sumisión"
   },
   {
     id: "predatory_alert",
     title: "Verificador de Integridad y Alerta de Predatoriedad",
     desc: "Compara contra listas de revistas con prácticas dudosas o desindexadas para proteger a los investigadores de editoriales mercenarias.",
-    baseVotes: 12,
+    baseVotes: 0,
     tag: "Ética e Integridad"
   },
   {
     id: "multilingual",
     title: "Soporte Multilingüe (Español / Português / English)",
     desc: "Interfaz y taxonomía de revistas completamente traducidas para integrar a la comunidad de investigadores de Brasil y el resto de la región.",
-    baseVotes: 8,
+    baseVotes: 0,
     tag: "Internacionalización"
   }
 ];
@@ -434,7 +436,7 @@ function renderRoadmap() {
       <div>
         <div class="flex items-center justify-between mb-2">
           <span class="text-xs px-2 py-0.5 rounded-full bg-slate-100 text-slate-700 font-medium">${escapeHtml(item.tag)}</span>
-          <span class="text-xs font-bold text-slate-500"><i class="fas fa-thumbs-up mr-1 text-indigo-500"></i> ${item.baseVotes} votos</span>
+          <span class="text-xs font-bold text-slate-500"><i class="fas fa-thumbs-up mr-1 text-indigo-500"></i> ${item.baseVotes} votos (locales)</span>
         </div>
         <h4 class="font-bold text-slate-800 text-sm mb-1">${escapeHtml(item.title)}</h4>
         <p class="text-xs text-slate-600 leading-relaxed mb-4">${escapeHtml(item.desc)}</p>
